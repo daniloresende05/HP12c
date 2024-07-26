@@ -14,7 +14,7 @@ public class Calculadora {
     private double numero;
     private Deque<Double> operandos;
     private int modo = MODO_EXIBINDO;
-// test4e
+
     public Calculadora() {
         numero = 0;
         operandos = new LinkedList<>();
