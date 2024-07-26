@@ -7,13 +7,229 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/btnClear"
+        style="@style/botaoNumerico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:minWidth="48dp"
+        android:text="C"
+        app:layout_constraintBottom_toTopOf="@+id/btnEnter"
+        app:layout_constraintStart_toStartOf="@+id/btnEnter" />
+
+    <Button
+        android:id="@+id/btnDivisao"
+        style="@style/botaoNumerico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:minWidth="48dp"
+        android:text="/"
+        app:layout_constraintBottom_toTopOf="@+id/btnMultiplicacao"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnMultiplicacao" />
+
+    <Button
+        android:id="@+id/btnMultiplicacao"
+        style="@style/botaoNumerico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:minWidth="48dp"
+        android:text="*"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubtracao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnSubtracao" />
+
+    <Button
+        android:id="@+id/btnSete"
+        style="@style/botaoNumerico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:minWidth="48dp"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@+id/btnQuatro"
+        app:layout_constraintStart_toStartOf="@+id/btnQuatro" />
+
+    <Button
+        android:id="@+id/btnNove"
+        style="@style/botaoNumerico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:minWidth="48dp"
+        android:text="9"
+        app:layout_constraintBottom_toTopOf="@+id/btnSeis"
+        app:layout_constraintStart_toStartOf="@+id/btnSeis" />
+
+    <Button
+        android:id="@+id/btnOito"
+        style="@style/botaoNumerico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:minWidth="48dp"
+        android:text="8"
+        app:layout_constraintBottom_toTopOf="@+id/btnCinco"
+        app:layout_constraintStart_toStartOf="@+id/btnCinco" />
+
+    <Button
+        android:id="@+id/btnSeis"
+        style="@style/botaoNumerico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:minWidth="48dp"
+        android:text="6"
+        app:layout_constraintBottom_toTopOf="@+id/btnTres"
+        app:layout_constraintStart_toStartOf="@+id/btnTres" />
+
+    <Button
+        android:id="@+id/btnCinco"
+        style="@style/botaoNumerico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:minWidth="48dp"
+        android:text="5"
+        app:layout_constraintBottom_toTopOf="@+id/btnDois"
+        app:layout_constraintStart_toStartOf="@+id/btnDois" />
+
+    <Button
+        android:id="@+id/btnQuatro"
+        style="@style/botaoNumerico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:minWidth="48dp"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@+id/btnUm"
+        app:layout_constraintStart_toStartOf="@+id/btnUm" />
+
+    <Button
+        android:id="@+id/btnSubtracao"
+        style="@style/botaoNumerico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:minWidth="48dp"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdicao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnAdicao" />
+
+    <Button
+        android:id="@+id/btnTres"
+        style="@style/botaoNumerico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:minWidth="48dp"
+        android:text="3"
+        app:layout_constraintBottom_toTopOf="@+id/btnBackSpace"
+        app:layout_constraintStart_toStartOf="@+id/btnBackSpace" />
+
+    <Button
+        android:id="@+id/btnUm"
+        style="@style/botaoNumerico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:minWidth="48dp"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/btnZero"
+        app:layout_constraintStart_toStartOf="@+id/btnZero" />
+
+    <Button
+        android:id="@+id/btnEnter"
+        style="@style/botaoNumerico"
+        android:layout_width="60dp"
+        android:layout_height="182dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="ENTER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnZero"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnAdicao"
+        style="@style/botaoNumerico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:minWidth="48dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBackSpace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnBackSpace" />
+
+    <Button
+        android:id="@+id/btnZero"
+        style="@style/botaoNumerico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:minWidth="48dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/btnEnter"
+        app:layout_constraintEnd_toStartOf="@+id/btnVirgula"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnEnter" />
+
+    <Button
+        android:id="@+id/btnVirgula"
+        style="@style/botaoNumerico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:minWidth="48dp"
+        android:text=","
+        app:layout_constraintBottom_toBottomOf="@+id/btnZero"
+        app:layout_constraintEnd_toStartOf="@+id/btnBackSpace"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnZero" />
+
+    <Button
+        android:id="@+id/btnBackSpace"
+        style="@style/botaoNumerico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:minWidth="48dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/btnVirgula"
+        app:layout_constraintEnd_toStartOf="@+id/btnAdicao"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnVirgula" />
+
+    <Button
+        android:id="@+id/btnDois"
+        style="@style/botaoNumerico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:minWidth="48dp"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@+id/btnVirgula"
+        app:layout_constraintStart_toStartOf="@+id/btnVirgula" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="377dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="312dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.686"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
