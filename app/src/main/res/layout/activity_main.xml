@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="#F44336"
         android:minWidth="48dp"
         android:text="C"
         app:layout_constraintBottom_toTopOf="@+id/btnEnter"
@@ -152,6 +153,7 @@
         android:layout_height="182dp"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="#3F51B5"
         android:text="ENTER"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnZero"
@@ -202,9 +204,10 @@
         style="@style/botaoNumerico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:layout_marginStart="16dp"
         android:minWidth="48dp"
-        android:text="-"
+        app:icon = "@drawable/baseline_backspace_24"
         app:layout_constraintBottom_toBottomOf="@+id/btnVirgula"
         app:layout_constraintEnd_toStartOf="@+id/btnAdicao"
         app:layout_constraintHorizontal_bias="0.5"
@@ -223,13 +226,13 @@
 
     <EditText
         android:id="@+id/editTextNumber"
-        android:layout_width="377dp"
-        android:layout_height="141dp"
-        android:layout_marginTop="312dp"
+        android:layout_width="351dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="308dp"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:textAlignment="textEnd"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.686"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
