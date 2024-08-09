@@ -1,7 +1,6 @@
 package com.example.hp12c;
 
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -92,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
             inicioSelecao = Math.max(inicioSelecao,0);
             int finalSelecao = visor.getSelectionEnd();
             visor.getText().delete(inicioSelecao, finalSelecao);
+            atualizarNumero();
         });
 
         btnEnter.setOnClickListener((v)->{
@@ -102,52 +102,47 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnMais.setOnClickListener((v)->{
-            double valorDoVisor = Double.valueOf(visor.getText().toString());
-            calculadora.setNumero(valorDoVisor);
             calculadora.soma();
-            String valor = String.valueOf(calculadora.getNumero());
-            visor.setText(valor);
+            atualizarVisor();
         });
 
         btnMenos.setOnClickListener((v)->{
-            double valorDoVisor = Double.valueOf(visor.getText().toString());
-            calculadora.setNumero(valorDoVisor);
             calculadora.subtracao();
-            String valor = String.valueOf(calculadora.getNumero());
-            visor.setText(valor);
+            atualizarVisor();
         });
 
         btnVezes.setOnClickListener((v)->{
-            double valorDoVisor = Double.valueOf(visor.getText().toString());
-            calculadora.setNumero(valorDoVisor);
             calculadora.multiplicacao();
-            String valor = String.valueOf(calculadora.getNumero());
-            visor.setText(valor);
+            atualizarVisor();
         });
 
         btnDivisao.setOnClickListener((v)->{
-            double valorDoVisor = Double.valueOf(visor.getText().toString());
-            calculadora.setNumero(valorDoVisor);
             calculadora.divisao();
-            String valor = String.valueOf(calculadora.getNumero());
-            visor.setText(valor);
-        });
-
-        btnVezes.setOnClickListener((v)->{
-            double valorDoVisor = Double.valueOf(visor.getText().toString());
-            calculadora.setNumero(valorDoVisor);
-            calculadora.multiplicacao();
-            String valor = String.valueOf(calculadora.getNumero());
-            visor.setText(valor);
+            atualizarVisor();
         });
 
     }
 
     public View.OnClickListener botaoclick(final String s) {
         return (v) -> {
+            if(calculadora.getModo()==calculadora.MODO_EXIBINDO){
+                visor.setText("");
+            }
             int inicioSelecao = visor.getSelectionStart();
             int finalSelecao = visor.getSelectionEnd();
             visor.getText().replace(inicioSelecao,finalSelecao,s);
+            atualizarNumero();
         };
+    }
+
+    public void atualizarNumero(){
+        String s = visor.getText().toString();
+        s = "".equals(s) ? "0" :s;
+        calculadora.setNumero(Double.valueOf(s));
+    }
+
+    public void atualizarVisor(){
+        double numero = calculadora.getNumero();
+        visor.setText(String.format("%.2f",numero));
     }
 }

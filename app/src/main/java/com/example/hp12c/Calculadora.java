@@ -15,6 +15,8 @@ public class Calculadora {
     private Deque<Double> operandos;
     private int modo = MODO_EXIBINDO;
 
+    
+
     public Calculadora() {
         numero = 0;
         operandos = new LinkedList<>();
